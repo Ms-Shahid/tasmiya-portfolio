@@ -1,0 +1,56 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@400;500&display=swap');
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #0D1117;
+  --color-surface: #161B22;
+  --color-accent: #C9A84C;
+  --color-teal: #2DD4BF;
+  --color-text: #F5F0E8;
+  --color-muted: #8B949E;
+  --color-border: #30363D;
+}
+
+@layer base {
+  html {
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    min-height: 100svh;
+    width: 100%;
+    background-color: var(--color-bg);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Keep the document locked only while the launch loader is visible. */
+html.loading-lock,
+body.loading-lock {
+  overflow: hidden;
+}
